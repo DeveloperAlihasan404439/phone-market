@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/0dfc93affd.js" crossorigin="anonymous"></script>
+    <title>I Phone Json</title>
+</head>
+
+<body class="bg-slate-200">
+    <header class="bg-gradient-to-t from-[#527690] via-[#97B2C8] to-[#233E53] ">
+        <nav class="fixed w-[100%] mx-auto z-10 bg-[#233E53] py-2">
+            <div class="navbar w-11/12 mx-auto h-0">
+                <div class="navbar-start py-2">
+                    <div class="dropdown">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <i class="fa-solid fa-align-justify text-white"></i>
+                        </label>
+                        <ul tabindex="0"
+                            class="flex flex-col dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-[300px] h-[400px] bg-[#233E53] text-white">
+                            <li class="text-3xl ">Home</li>
+                            <li class="text-3xl ">About us</li>
+                            <li class="text-3xl ">Manu</li>
+                            <li class="text-3xl ">Contact</li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img src="./img/icon.png" alt="" class="w-[70px] h-[50px] rounded-md">
+                        <h1 class="text-2xl font-medium text-orange-500 ">phone market </h1>
+
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="flex gap-3 text-2xl font-medium text-white">
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Manu</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <div class="flex justify-center gap-2">
+                        <input id="search-input-filt" type="text" placeholder="Type here"
+                            class="input input-bordered w-full max-w-xs" />
+                        <button onclick="heldelSearch()"
+                            class="py-1 px-5 text-2xl font-medium text-black bg-gradient-to-l from-orange-400 via-orange-300 to-[#d4bc6d] rounded-md shadow-lg ">Search</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="w-11/12 mx-auto pt-28 pb-20">
+            <section class="md:flex lg:flex-row-reverse justify-between items-center">
+                <div class="md:w-[50%]">
+                    <img src="/img/banner.jpg" alt="" class="w-[100%] rounded-md">
+                </div>
+                <div class="md:w-[50%] text-center">
+                    <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold text-orange-500 py-2 md:py-5">Exploring the
+                        Dynamic Smartphone Market</h1>
+                    <h1 class="text-[20px] lg:text-xl text-white p-2 font-medium">Explore the dynamic landscape of the
+                        smartphone market, from cutting-edge innovations to shifting consumer preferences. Stay ahead in
+                        this ever-evolving industry with our comprehensive analysis and insights.</h1>
+                    <div class="text-center gap-2 md:gap-5 py-2 md:py-5">
+                        <button
+                            class="text-xl md:text-2xl text-black font-medium py-2 px-4 bg-gradient-to-l from-orange-400 via-orange-300 to-[#d4bc6d] rounded-md">Show
+                            Ditails</button>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+    </header>
+
+    <main class="w-11/12 mx-auto">
+        <section>
+            <h1 class="text-center text-2xl font-medium mt-6 text-black py-7">Smartphone Revolution Unveiled: Navigating
+                the Ever-Changing <br> Phone Market Landscape - Emerging Trends, <br> Innovative Technologies, and
+                Evolving Consumer Choices for Industry <br> Professionals and Enthusiasts Alike</h1>
+        </section>
+        <div id="phone" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        <div id="show-all-button" class="hidden">
+            <div class="flex justify-center my-7">
+                <button onclick="showAllButton()"
+                    class="my-3 py-1 px-3 bg-gradient-to-l from-orange-400 via-orange-300 to-[#d4bc6d] text-black text-2xl font-medium rounded-lg">Show
+                    All</button>
+            </div>
+        </div>
+        <div id="lodding-button" class="hidden">
+            <div class="flex justify-center my-7">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+        </div>
+        <div>
+            <dialog id="my_ditails_modal" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box flex justify-center" id="phone-show-ditails">
+                </form>
+            </dialog>
+        </div>
+        <section class="md:flex items-center gap-4 py-4 mb-4">
+            <div class="md:w-[50%]">
+                <img src="/img/img1.png" alt="" class="w-[100%] rounded-2xl">
+            </div>
+            <div class="md:w-[50%]">
+                <h1 class="text-2xl font-medium text-black pb-3">Gain exclusive insights into the next generation of
+                    mobile devices.</h1>
+                <p class="text-xl font-medium text-black">Delve into the smartphone market's ever-evolving landscape in
+                    this comprehensive 50-page report. Explore emerging trends, cutting-edge technologies, and shifting
+                    consumer choices. A crucial resource for industry professionals and tech enthusiasts.
+                </p>
+                <div class="pl-4 mt-7">
+                    <div class="flex items-center mb-3 gap-4">
+                        <div
+                            class="px-4 py-2 bg-gradient-to-t from-orange-400 via-orange-300 to-[#d4bc6d] rounded-[50%]">
+                            <i class="fa-solid fa-check text-2xl text-black font-extrabold"></i>
+                        </div>
+                        <h1 class="text-xl font-medium text-black">Discover the future of mobile technology.</h1>
+                    </div>
+                    <div class="flex items-center mb-3 gap-4">
+                        <div
+                            class="px-4 py-2 bg-gradient-to-t from-orange-400 via-orange-300 to-[#d4bc6d] rounded-[50%]">
+                            <i class="fa-solid fa-check text-2xl text-black font-extrabold"></i>
+                        </div>
+                        <h1 class="text-xl font-medium text-black">The Smartphone Revolution Unveiled.</h1>
+                    </div>
+                    <div class="flex items-center mb-3 gap-4">
+                        <div
+                            class="px-4 py-2 bg-gradient-to-t from-orange-400 via-orange-300 to-[#d4bc6d] rounded-[50%]">
+                            <i class="fa-solid fa-check text-2xl text-black font-extrabold"></i>
+                        </div>
+                        <h1 class="text-xl font-medium text-black">A crucial resource for industry professionals.</h1>
+                    </div>
+                    <div class="flex items-center mb-3 gap-4">
+                        <div
+                            class="px-4 py-2 bg-gradient-to-t from-orange-400 via-orange-300 to-[#d4bc6d] rounded-[50%]">
+                            <i class="fa-solid fa-check text-2xl text-black font-extrabold"></i>
+                        </div>
+                        <h1 class="text-xl font-medium text-black">Stay ahead of the curve with this in-depth analysis
+                        </h1>
+                    </div>
+                    <div class="flex items-center mb-3 gap-4">
+                        <div
+                            class="px-4 py-2 bg-gradient-to-t from-orange-400 via-orange-300 to-[#d4bc6d] rounded-[50%]">
+                            <i class="fa-solid fa-check text-2xl text-black font-extrabold"></i>
+                        </div>
+                        <h1 class="text-xl font-medium text-black">Explore emerging trends, cutting-edge technologies,
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gradient-to-t from-[#527690] via-[#97B2C8] to-[#233E53] ">
+        <div class="flex justify-center pt-20">
+            <div class="grid grid-flow-col gap-4 pb-7">
+                <a class="link link-hover text-3xl font-semibold text-white">About us</a>
+                <a class="link link-hover text-3xl font-semibold text-white">Contact</a>
+                <a class="link link-hover text-3xl font-semibold text-white">Jobs</a>
+            </div>
+        </div>
+        <div class="flex justify-center pb-20">
+            <div class="grid grid-flow-col gap-4">
+                <i class="fa-brands fa-facebook text-3xl font-semibold text-black"></i>
+                <i class="fa-brands fa-instagram text-3xl font-semibold text-black"></i>
+                <i class="fa-brands fa-linkedin text-3xl font-semibold text-blue-700"></i>
+                <i class="fa-solid fa-g text-3xl font-semibold text-white"></i>
+            </div>
+        </div>
+        <div class="text-center text-xl font-light text-black pb-5">
+            <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
