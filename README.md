@@ -2,4 +2,5 @@
 #tailwind css
 #javascript
 #API
-***https://app.netlify.com/sites/rainbow-cheesecake-004d72/deploys/64ee445abbebc721b01026ca***
+...
+##Live Link ***https://64ee445abbebc721b01026ca--rainbow-cheesecake-004d72.netlify.app/***
