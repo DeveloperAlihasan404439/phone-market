@@ -14,13 +14,13 @@
     <header class="bg-gradient-to-t from-[#527690] via-[#97B2C8] to-[#233E53] ">
         <nav class="fixed w-[100%] mx-auto z-10 bg-[#233E53] py-2">
             <div class="navbar w-11/12 mx-auto h-0">
-                <div class="navbar-start py-2">
+                <div class="navbar-start  py-2">
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
                             <i class="fa-solid fa-align-justify text-white"></i>
                         </label>
                         <ul tabindex="0"
-                            class="flex flex-col dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-[300px] h-[400px] bg-[#233E53] text-white">
+                            class="flex flex-col dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-[350px] h-[400px] bg-[#233E53] text-white">
                             <li class="text-3xl ">Home</li>
                             <li class="text-3xl ">About us</li>
                             <li class="text-3xl ">Manu</li>
@@ -28,8 +28,12 @@
                         </ul>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img src="./img/icon.png" alt="" class="w-[70px] h-[50px] rounded-md">
-                        <h1 class="text-2xl font-medium text-orange-500 ">phone market </h1>
+                        <div class="hidden md:block">
+                            <img src="./img/icon.png" alt="" class="w-[70px] h-[50px] rounded-md">
+                        </div>
+                        <div class="hidden md:block">
+                            <h1 class="text-2xl font-medium text-orange-500 ">phone market </h1>
+                        </div>
 
                     </div>
                 </div>
@@ -43,8 +47,8 @@
                 </div>
                 <div class="navbar-end">
                     <div class="flex justify-center gap-2">
-                        <input id="search-input-filt" type="text" placeholder="Type here"
-                            class="input input-bordered w-full max-w-xs" />
+                        <input id="search-input-filt" type="text" placeholder="Search Phone"
+                            class="input input-bordered w-[150px] md:w-full" />
                         <button onclick="heldelSearch()"
                             class="py-1 px-5 text-2xl font-medium text-black bg-gradient-to-l from-orange-400 via-orange-300 to-[#d4bc6d] rounded-md shadow-lg ">Search</button>
                     </div>
@@ -56,7 +60,7 @@
                 <div class="md:w-[50%]">
                     <img src="/img/banner.jpg" alt="" class="w-[100%] rounded-md">
                 </div>
-                <div class="md:w-[50%] text-center">
+                <div class="md:w-[50%] text-center mt-3 md:mt-0">
                     <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold text-orange-500 py-2 md:py-5">Exploring the
                         Dynamic Smartphone Market</h1>
                     <h1 class="text-[20px] lg:text-xl text-white p-2 font-medium">Explore the dynamic landscape of the
@@ -94,7 +98,7 @@
         </div>
         <div>
             <dialog id="my_ditails_modal" class="modal modal-bottom sm:modal-middle">
-                <form method="dialog" class="modal-box flex justify-center" id="phone-show-ditails">
+                <form method="dialog" class="w-[100%] md:w-[30%]" id="phone-show-ditails">
                 </form>
             </dialog>
         </div>
@@ -102,7 +106,7 @@
             <div class="md:w-[50%]">
                 <img src="/img/img1.png" alt="" class="w-[100%] rounded-2xl">
             </div>
-            <div class="md:w-[50%]">
+            <div class="md:w-[50%] mt-3 md:mt-0">
                 <h1 class="text-2xl font-medium text-black pb-3">Gain exclusive insights into the next generation of
                     mobile devices.</h1>
                 <p class="text-xl font-medium text-black">Delve into the smartphone market's ever-evolving landscape in
@@ -153,13 +157,13 @@
     </main>
     <footer class="bg-gradient-to-t from-[#527690] via-[#97B2C8] to-[#233E53] ">
         <div class="flex justify-center pt-20">
-            <div class="grid grid-flow-col gap-4 pb-7">
+            <div class="grid grid-flow-col gap-4 pb-3 md:pb-7">
                 <a class="link link-hover text-3xl font-semibold text-white">About us</a>
                 <a class="link link-hover text-3xl font-semibold text-white">Contact</a>
                 <a class="link link-hover text-3xl font-semibold text-white">Jobs</a>
             </div>
         </div>
-        <div class="flex justify-center pb-20">
+        <div class="flex justify-center pb-3 md:pb-20">
             <div class="grid grid-flow-col gap-4">
                 <i class="fa-brands fa-facebook text-3xl font-semibold text-black"></i>
                 <i class="fa-brands fa-instagram text-3xl font-semibold text-black"></i>

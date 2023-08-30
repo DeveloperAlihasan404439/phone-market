@@ -60,17 +60,19 @@ const showDitailsDisplay = data =>{
     const phoneDitails = document.getElementById('phone-show-ditails')
     phoneDitails.innerText = ''
     const phoneCreate = document.createElement('div')
-    phoneCreate.classList = 'flex flex-col justify-center'
+    phoneCreate.classList = 'bg-gradient-to-l from-[#527690] via-[#97B2C8] to-[#233E53]  rounded-2xl'
     phoneCreate.innerHTML = `
-    <img src="${image}" alt="Shoes" class='h-[350px]'/>
-    <h3 class="font-bold text-2xl mt-2 text-black">Phone Name : ${name}</h3>
-    <h3 class="font-bold text-lg text-black m-0">Phone Brand : ${brand}</h3>
-    <p class="text-xl font-medium text-black">Phone Display Size : ${mainFeatures?.displaySize}</p>
-    <p class="text-xl font-medium text-black">Phone Memory : ${mainFeatures?.memory || 'No Memory Data'}</p>
-    <p class="text-xl font-medium text-black">Phone Bluetooth : ${others?.Bluetooth || "No bluetooth"}</p>
-    <p class="text-xl font-medium text-black">Phone USB : ${others?.USB || 'No Usb'}</p>
+    <div class="flex flex-col justify-center rounded-2xl p-5">
+    <img src="${image}" alt="Shoes" class='h-[350px] rounded-2xl'/>
+    <h3 class="font-bold text-2xl mt-2 text-white">Phone Name : ${name}</h3>
+    <h3 class="font-bold text-lg text-white m-0">Phone Brand : ${brand}</h3>
+    <p class="text-xl font-medium text-white">Phone Display Size : ${mainFeatures?.displaySize}</p>
+    <p class="text-xl font-medium text-white">Phone Memory : ${mainFeatures?.memory || 'No Memory Data'}</p>
+    <p class="text-xl font-medium text-white">Phone Bluetooth : ${others?.Bluetooth || "No bluetooth"}</p>
+    <p class="text-xl font-medium text-white">Phone USB : ${others?.USB || 'No Usb'}</p>
     <div class="modal-action">
-        <button class="py-1 w-full bg-blue-500 text-2xl text-white font-medium rounded-lg">Close</button>
+        <button class="py-1 w-full bg-gradient-to-l from-orange-400 via-orange-300 to-[#d4bc6d] text-2xl text-black font-medium rounded-lg">Close</button>
+    </div>
     </div>
     `
     phoneDitails.appendChild(phoneCreate)
@@ -82,7 +84,6 @@ const heldelSearch = (isShowAll) => {
     const searchText = searchInputFilt.value;
     phone(searchText,isShowAll)
     loddingSppner(true)
-    // searchInputFilt.value = ''
 }
 
 // show all button not oks
